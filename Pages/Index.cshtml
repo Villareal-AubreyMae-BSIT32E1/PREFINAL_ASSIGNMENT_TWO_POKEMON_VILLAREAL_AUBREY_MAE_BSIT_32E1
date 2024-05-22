@@ -1,0 +1,13 @@
+﻿@model List<Pokemon>
+
+@{
+    ViewData["Title"] = "Pokemon List";
+}
+
+<h1>Pokemon List</h1>
+<ul>
+    @foreach (var pokemon in Model)
+    {
+        <li><a asp-controller="Pokemon" asp-action="Details" asp-route-name="@pokemon.Name">@pokemon.Name</a></li>
+    }
+</ul>
